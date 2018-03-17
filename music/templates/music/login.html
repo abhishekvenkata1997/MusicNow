@@ -1,0 +1,58 @@
+{% extends 'music/base.html' %}
+{% block title %}User Login {% endblock %}
+
+
+{% block body %}
+
+<h2 align = "left" > Welcome</h2>
+
+{% if error %}
+    <h2> {{ username }}</h2>
+{% endif %}
+<nav class = "navbar navbar-inverse">
+    <div class = "col-sm-4"></div>
+        <div class ="col-sm-4">
+            <div class = "panel panel-default">
+                <div class = "panel-body">
+                    <
+                    <ul class = "nav navbar-nav" >
+                        <li class = "active">
+                            <a href = "{% url 'music:login' %}">
+                                <span class = "glyphicon glyphicon-user" aria-hidden = "true">&nbsp;
+                                    Login
+                                </span>
+                        </a>
+                        </li>
+                        <li class = "active">
+                            <a href = "{% url 'music:register' %}">
+                                <span class = "glyphicon glyphicon-notes" aria-hidden = "true">&nbsp;
+                                    Register
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+
+
+            <div class = "panel panel-default">
+
+
+                <form class = "form-horizontal" action = "" method = "post" enctype = "multipart/form-data">
+                    {% csrf_token %}
+                         <div class = " panel-body"><br>
+                             <div style = "text-align :center">
+                            Username <input type = "text" name = "username"/><br><br>
+                            Password <input type = "text"  name = "password"/><br><br>
+
+
+                                 <button type = "submit"  class = "btn btn-success"> Submit </button>
+                             </div>
+                        </div>
+                </form>
+
+            </div>
+        </div>
+</nav>
+
+{% endblock %}

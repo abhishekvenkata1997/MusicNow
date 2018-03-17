@@ -1,0 +1,19 @@
+body{
+  background : blue url("images/bgimages.jpg");
+   background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; ;
+}
+
+footer{
+display : block
+}
+.navbar
+{
+border-radius: 0;
+}
+
+.navbar-brand
+{
+font-family : bold ;
+}
